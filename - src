@@ -1,0 +1,16 @@
+- components
+    - Auth
+      - LoginForm.tsx
+      - SignupForm.tsx
+      - PasswordResetForm.tsx
+    - Dashboard
+      - Dashboard.tsx
+      - HabitCard.tsx
+    - Habit
+      - HabitForm.tsx
+      - HabitDetail.tsx
+  - styles
+    - tailwind.config.js
+  - utils
+  - App.tsx
+  - index.tsx
