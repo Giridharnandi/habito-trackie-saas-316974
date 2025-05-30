@@ -1,0 +1,36 @@
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Dashboard from './components/Dashboard/Dashboard';
+import LoginForm from './components/Auth/LoginForm';
+import SignupForm from './components/Auth/SignupForm';
+import PasswordResetForm from './components/Auth/PasswordResetForm';
+import HabitDetail from './components/Habit/HabitDetail';
+
+const App = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  return (
+    <Router>
+      <div className={`App ${isDarkMode ? 'dark' : ''}`}>
+        <Switch>
+          <Route path="/login">
+            <LoginForm />
+          </Route>
+          <Route path="/signup">
+            <SignupForm />
+          </Route>
+          <Route path="/reset-password">
+            <PasswordResetForm />
+          </Route>
+          <Route exact path="/">
+            <Dashboard />
+          </Route>
+          <Route path="/habit/:id">
+            <HabitDetail />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+};
+
+export default App;
